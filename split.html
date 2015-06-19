@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Frame Melee</title>
+	<meta name="author" content="Renard Tumbokon, kerblaster" />
+	<meta name="description" content="Frame data on all characters of Super Smash Bros Melee" />
+	<link rel="shortcut icon" href="images/fav.ico" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="scripts.js"></script>
+	<script src="phonegap.js"></script>
+</head>
+
+<body onload="splitFrames()">
+<div id="header"> Frame Melee
+		<div id="description" > <!--bar displays description-->
+			<img id="floatLeft" onclick="parent.location='index.html'" src="images/logo.png"/>
+			<img id="floatRight" onclick="setCharSelect('split')" src="images/restart.png"></img>
+			<span id="status">Single View</span>
+		</div>
+</div>
+
+<iframe id="splitFrameTop" src="characters.html"></iframe>
+<hr>
+<iframe id="splitFrameBot" src="characters.html"></iframe>
+
+</body>

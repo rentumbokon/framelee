@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Frame Melee</title>
+	<meta name="author" content="Renard Tumbokon, kerblaster" />
+	<meta name="description" content="Frame data on all characters of Super Smash Bros Melee" />
+	<link rel="shortcut icon" href="images/fav.ico" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="scripts.js"></script>
+	<script src="phonegap.js"></script>
+</head>
+
+<body onload="midButton()">
+<div id="header"> Frame Melee
+	<div id="description" > <!--bar displays description-->
+		<img id="floatLeft" src="images/logo.png"/>
+		<img id="floatRight" onclick="parent.location='credits.html'" src="images/heart.png"></img>
+		<span id="status">- Select interface type -</span>
+	</div>
+</div>
+
+<div id="main">
+	<br>
+	<div class="button" onClick="parent.location='single.html'"> 
+			<img class="leftBracket" src="images/leftBracket.png"> &#9633 Single View &#9633 <img class="rightBracket" src="images/rightBracket.png">
+	</div>
+	
+	<br><br><br>
+	
+	<div class="button" onClick="parent.location='split.html'"> 
+			<img class="leftBracket" src="images/leftBracket.png"> &#9633&#9633 Split View &#9633&#9633 <img class="rightBracket" src="images/rightBracket.png">
+	</div>
+</div>
+</body>
