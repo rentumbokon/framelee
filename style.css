@@ -227,7 +227,7 @@ hr{
 	z-index:2;
 	position: absolute;
 	width:100%;
-	height:calc(100% - 60px);
+	height:100%;
 	overflow:hidden;
 }
 
@@ -237,7 +237,7 @@ hr{
 	z-index:2;
 	position: absolute;
 	width:100%;
-	height:40%;
+	height:50%;
 	border-bottom: 2px solid #00FFFF;
 	overflow:hidden;
 }

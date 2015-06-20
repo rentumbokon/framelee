@@ -1,0 +1,56 @@
+
+
+
+
+
+<!--THIS IS A TEST!!! MASSIVELY RENOVATE PLS-->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Frame Melee</title>
+	<meta name="author" content="Renard Tumbokon, kerblaster" />
+	<meta name="description" content="Frame data on all characters of Super Smash Bros Melee" />
+	<link rel="shortcut icon" href="../../images/fav.ico" />
+	<link rel="stylesheet" type="text/css" href="../../style.css" />
+	<script type="text/javascript" src="../../scripts.js"></script>
+	<script src="../../phonegap.js"></script>
+	<!--Gif-->
+	<script>
+	function jokes(character, action){
+		document.getElementById("charName").innerHTML = character + ":";
+		document.getElementById("actionName").innerHTML = action;
+		var trans_char = translateChar(character);
+		//var trans_action = translateAction(action);
+		document.getElementById("charIcon").src = "../../images/characters/" + trans_char + ".png";
+	}
+	</script>
+</head>
+
+<body onload="jokes('Fox','Forward Roll')"> <!--<<<<<<-DATA GOES HERE-->
+<div id="labFloatLeft"> 
+	<p id="charName">Name:</p><br>
+	<p id="actionName">Action</p><br>
+	<p id="currFrame">0</p><p id="totalFrames">/0</p><br>	
+</div>
+<img id="charIcon" src="../../images/silhouette.png" onclick="location.href='../moveset.html'"> 
+<img id="backIcon" src="../../images/back.png" onclick="location.href='../moveset.html'">
+<!--Header-->																
+<div id="gifDiv">														<!--vvvvvv-GIF GOES HERE-->
+	<img id="gifFrame" src="../images/front_roll.gif"/>
+</div>
+<!--Footer-->
+<div id="footerControls">
+	<a href="javascript:;" onmousedown="gif1.play(); return false;"><img id="playButton" src="../../images/controls/play.png"></a>
+	<a href="javascript:;" onmousedown="gif1.pause(); return false;"><img id="pauseButton" src="../../images/controls/pause.png"></a>
+	<a href="javascript:;" onmousedown="gif1.move_to(0); return false;"><img id="restartButton" src="../../images/controls/restart.png"></a>
+	<a href="javascript:;" onmousedown="gif1.move_relative(1); return false;"><img id="forwardsButton" src="../../images/controls/forwards.png"></a>
+	<a href="javascript:;" onmousedown="gif1.move_relative(-1); return false;"><img id="backwardsButton" src="../../images/controls/backwards.png"></a>
+</div>
+</body>

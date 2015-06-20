@@ -3,7 +3,7 @@ function onload(character,action){
 	document.getElementById("charName").innerHTML = character + ":";
 	document.getElementById("actionName").innerHTML = action;
 	var trans_char = translateChar(character);
-	var trans_action = translateAction(action);
+	//var trans_action = translateAction(action);
 	document.getElementById("charIcon").src = "../../images/characters/" + trans_char + ".png";
 	/*set width/height of frame
 	var winHeight = window.innerHeight - 60;	//-60 footer compensate
@@ -125,7 +125,7 @@ function translateChar(character){
 		return "younglink";
 	}
 	else{
-		return character.charAt(0).toUpperCase() + character.slice(1);
+		return character.charAt(0).toLowerCase() + character.slice(1);
 	}
 }
 
@@ -133,7 +133,7 @@ function translateAction(action){
 	if (action == "Spot Dodge"){
 		return "down_dodge";
 	}
-	else if (action == "Air Dodge"){
+	else if (action == "Aerial Dodge"){
 		return "air_dodge";
 	}
 	else if (action == "Forward Roll"){
