@@ -60,7 +60,6 @@
     } else {
         root.RubbableGif = factory(root.SuperGif);
     }
-	alert('first');	//debug
 }(this, function (SuperGif) {
     var RubbableGif = function( options ) {
         var sup = new SuperGif( options );
@@ -135,8 +134,6 @@
 
 
             });
-			
-			alert('second');	//debug
         };
 
         sup.orig_load = sup.load;
@@ -145,7 +142,6 @@
                 if (callback) callback();
                 register_canvas_handers( sup );
             } );
-			alert('third');	//debug
         }
 
         return sup;
