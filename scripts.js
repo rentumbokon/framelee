@@ -48,7 +48,7 @@ function iscroll(){	//scroll gracefully
 function splitFrames(){	//properly split split.html iFrames
 	var height = window.innerHeight - 60;	//minus header
 	//set absolute positions of iframes
-	document.getElementById("splitFrameTop").style.top = "60px";
+	document.getElementById("splitFrameTop").style.top = "60px";	//compensate header
 	document.getElementById("splitFrameBot").style.top = (height/2+60)+"px";
 	//set height
 	document.getElementById("splitFrameTop").style.height = (height/2)+"px";
@@ -63,6 +63,11 @@ function splitFrames(){	//properly split split.html iFrames
 		document.getElementById("splitFrameTop").style.height = (height/2)+"px";
 		document.getElementById("splitFrameBot").style.height = (height/2)+"px";
 	});
+}
+
+function singleFrame(){
+	var height = window.innerHeight - 60;	//minus header
+	document.getElementById("singleFrame").style.top = "60px";
 }
 
 function setCharSelect(type){	//set iFrames to characters.html
