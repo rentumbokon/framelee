@@ -27,15 +27,6 @@ function onload(character,action){
 	getCurrentFrame();
 }
 
-function midButton(){	//make 2 buttons go to middle
-	var height = window.innerHeight;
-	document.getElementById("main").style.top = (height/2) - 110 + "px";
-	window.addEventListener("resize",function(){
-		var height = window.innerHeight;
-		document.getElementById("main").style.top = (height/2) - 110 + "px";
-	});
-}
-
 function iscroll(){	//scroll gracefully
 	var myScroll;
 	loaded();
@@ -68,6 +59,11 @@ function splitFrames(){	//properly split split.html iFrames
 function singleFrame(){
 	var height = window.innerHeight - 60;	//minus header
 	document.getElementById("singleFrame").style.top = "60px";
+	document.getElementById("singleFrame").style.height = height + "px";
+	window.addEventListener("resize",function(){
+		var height = window.innerHeight - 60;	//minus header
+		document.getElementById("singleFrame").style.height = height + "px";
+	});
 }
 
 function setCharSelect(type){	//set iFrames to characters.html
