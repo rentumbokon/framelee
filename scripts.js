@@ -1,17 +1,15 @@
 var gif1;	//gif var to be accessible to other functions
 function onload(character,action){
-	setTimeout(function(){		
-		document.getElementById("charName").innerHTML = character + ":";
-		document.getElementById("actionName").innerHTML = action;
-		var trans_char = translateChar(character);
-		//var trans_action = translateAction(action);
-		document.getElementById("charIcon").src = "../../images/characters/" + trans_char + ".png";
-		//gif load
-		gif1 = new RubbableGif({ gif: document.getElementById('gifFrame') } );
-		gif1.load();//stopped here
-		getTotalFrames();
-		getCurrentFrame();
-	}, 5000);
+	document.getElementById("charName").innerHTML = character + ":";
+	document.getElementById("actionName").innerHTML = action;
+	var trans_char = translateChar(character);
+	//var trans_action = translateAction(action);
+	document.getElementById("charIcon").src = "../../images/characters/" + trans_char + ".png";
+	//gif load
+	gif1 = new RubbableGif({ gif: document.getElementById('gifFrame') } );
+	gif1.load();//stopped here
+	getTotalFrames();
+	getCurrentFrame();
 }
 
 function iscroll(){	//scroll gracefully
