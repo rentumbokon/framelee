@@ -1,30 +1,17 @@
 var gif1;	//gif var to be accessible to other functions
 function onload(character,action){
-	document.getElementById("charName").innerHTML = character + ":";
-	document.getElementById("actionName").innerHTML = action;
-	var trans_char = translateChar(character);
-	//var trans_action = translateAction(action);
-	document.getElementById("charIcon").src = "../../images/characters/" + trans_char + ".png";
-	/*set width/height of frame
-	var winHeight = window.innerHeight - 60;	//-60 footer compensate
-	var winWidth = window.innerWidth - 60;
-	var imgHeight = document.getElementById("gifFrame").height;
-	var imgWidth = document.getElementById("gifFrame").width;
-	var heightDiff = Math.abs(winHeight - imgHeight);
-	var widthDiff = Math.abs(winWidth - imgWidth);
-	if (widthDiff > heightDiff){	//scale to height
-		document.getElementById("gifFrame").height = imgHeight + heightDiff;
-		document.getElementById("gifFrame").width = imgWidth + heightDiff;
-	}
-	else{	//scale to width
-		document.getElementById("gifFrame").height = imgHeight + widthDiff;
-		document.getElementById("gifFrame").width = imgWidth + widthDiff;		
-	}*/
-	//gif load
-	gif1 = new RubbableGif({ gif: document.getElementById('gifFrame') } );
-	gif1.load();//stopped here
-	getTotalFrames();
-	getCurrentFrame();
+	setTimeout(function(){		
+		document.getElementById("charName").innerHTML = character + ":";
+		document.getElementById("actionName").innerHTML = action;
+		var trans_char = translateChar(character);
+		//var trans_action = translateAction(action);
+		document.getElementById("charIcon").src = "../../images/characters/" + trans_char + ".png";
+		//gif load
+		gif1 = new RubbableGif({ gif: document.getElementById('gifFrame') } );
+		gif1.load();//stopped here
+		getTotalFrames();
+		getCurrentFrame();
+	}, 5000);
 }
 
 function iscroll(){	//scroll gracefully
