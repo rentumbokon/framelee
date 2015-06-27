@@ -5,6 +5,7 @@
   <content src="index.html"/>
   
   <preference name='phonegap-version' value='cli-5.1.1' />
+  <preference name="phonegap-version" value="3.7.0" />
   
   <preference name="permissions" value="none"/>
   <preference name="orientation" value="portrait"/>
@@ -37,9 +38,6 @@
   <icon src="www/res/icon/windows-phone/icon-173-tile.png" gap:platform="winphone" gap:role="background"/>
   
   <gap:plugin name='org.crosswalk.engine' version='1.3.0' source='pgb' />
-  <gap:plugin name="cordova-plugin-whitelist" source="npm" version="1.0.0" />
-  <gap:plugin name="cordova-plugin-file" source="npm" />
-  <gap:plugin name="cordova-plugin-file-transfer" source="npm" />
 
   <gap:splash src="www/res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="port-ldpi"/>
   <gap:splash src="www/res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="port-mdpi"/>
