@@ -10,33 +10,49 @@
 	<link rel="stylesheet" type="text/css" href="style.css" />
 	<script type="text/javascript" src="scripts.js"></script>
 	<script type="text/javascript" src="http://debug.phonegap.com/target/target-script-min.js#82edbab2-16de-11e5-83d9-6abe55c5a606"></script>
+	<script type="text/javascript" src="iscroll.js"></script>
+	<script src="admob.js"></script>
 	<script src="phonegap.js"></script>
 </head>
 
-<body>
+<body onload="iscroll()">
 <div id="header"> Frame Melee
 	<div id="description" > <!--bar displays description-->
 		<img id="floatLeft" src="images/logo.png"/>
 		<img id="floatRight" onclick="parent.location='credits.html'" src="images/heart.png"></img>
-		<span id="status">- Select interface type -</span>
+		<span id="status">- Select Option -</span>
 	</div>
 </div>
-
-<div id="main">
-	<br><br><br>
-	<div class="button" onClick="parent.location='single.html'"> 
-			<img class="leftBracket" src="images/leftBracket.png"> &#9633 Single View &#9633 <img class="rightBracket" src="images/rightBracket.png">
+<!--^--HEADER--//--BODY--v-->
+	<div id="wrapper">
+		<div id="scroller">
+			<br><br><br><br>
+			<div class="button" onClick="parent.location='single.html'"> 
+					<img class="leftBracket" src="images/leftBracket.png"> Single View <img class="rightBracket" src="images/rightBracket.png">
+			</div>
+			<br>
+			<div class="button" onClick="parent.location='split.html'"> 
+					<img class="leftBracket" src="images/leftBracket.png"> Split View <img class="rightBracket" src="images/rightBracket.png">
+			</div>
+			<br>
+			<div class="button" onClick="parent.location='ranking.html'"> 
+					<img class="leftBracket" src="images/leftBracket.png"> Stat Rankings <img class="rightBracket" src="images/rightBracket.png">
+			</div>
+			<br>
+			<div class="button" onClick="parent.location='stages.html'"> 
+					<img class="leftBracket" src="images/leftBracket.png"> Stages <img class="rightBracket" src="images/rightBracket.png">
+			</div>
+			<br>
+			<div class="button" onClick="parent.location='instructions.html'"> 
+					<img class="leftBracket" src="images/leftBracket.png"> Instructions <img class="rightBracket" src="images/rightBracket.png">
+			</div>
+			<br>
+			<div class="button" onClick="parent.location='https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=kerblaster%40hotmail%2ecom&lc=US&item_name=Frame%20Melee%20App&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted'"> 
+				<img class="leftBracket" src="images/leftBracket.png"> Donate &#9829 <img class="rightBracket" src="images/rightBracket.png">
+			</div>
+			<br><br>
+		</div>
 	</div>
-	<br>
-	<div class="button" onClick="parent.location='split.html'"> 
-			<img class="leftBracket" src="images/leftBracket.png"> &#9633&#9633 Split View &#9633&#9633 <img class="rightBracket" src="images/rightBracket.png">
-	</div>
-	<br>
-	<div class="button" onClick="parent.location='test/example.html'"> 
-			<img class="leftBracket" src="images/leftBracket.png"> Stat Rankings <img class="rightBracket" src="images/rightBracket.png">
-	</div>
-
-</div>
-
-	<div id="footer">App developed by Renard Tumbokon (Kerblaster)</div>
+<div id="footer">Developed by Renard Tumbokon (Kerblaster)</div>
 </body>
+</html>

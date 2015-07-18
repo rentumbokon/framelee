@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Frame Melee</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+	<meta name="author" content="Renard Tumbokon, kerblaster" />
+	<meta name="description" content="Frame data on all characters of Super Smash Bros Melee" />
+	<link rel="shortcut icon" href="images/fav.ico" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="scripts.js"></script>
+	<script type="text/javascript" src="iscroll.js"></script>
+	<script src="phonegap.js"></script>
+	<script type="text/javascript" src="http://debug.phonegap.com/target/target-script-min.js#82edbab2-16de-11e5-83d9-6abe55c5a606"></script>
+</head>
+
+<body onload="iscroll()">
+<div id="header"> Frame Melee
+		<div id="description" > <!--bar displays description-->
+			<img id="floatLeft" onclick="parent.location='index.html'" src="images/logo.png"/>
+			<img id="floatRight" onClick="location.href='index.html'" src="images/back_header.png"></img>
+			<span id="status">Stages</span>
+		</div>
+</div>
+<!--^--HEADER--//--BODY--v-->
+<div id="wrapper">
+	<div id="scroller">
+		<br><br><br><br>
+		<ul>
+			<li class="listTitle">Select a stage:</li><br>
+			<li onClick="location.href='stages/bf.html'"><img class="charImg" src="images/stages/icons/bf.png"> Battlefield</li>
+			<li class="info">
+				<b>Blast Zone Height:</b> 200 (4th)<br>
+				<b>Blast Zone Width:</b> 448 (3rd)<br>
+				<b>Stage Element:</b> Lack thereof<br>
+				<b>Note:</b> Most neutral stage in the game. Has tricky ledges<br>
+			</li><br>
+			<li onClick="location.href='stages/dl.html'"><img class="charImg" src="images/stages/icons/dl.png"> Dreamland 64</li>
+			<li class="info">
+				<b>Blast Zone Height:</b> 250 (6th)<br>
+				<b>Blast Zone Width:</b> 510 (6th)<br>
+				<b>Stage Element:</b> Whispy Wind<br>
+				<b>Note:</b> Biggest legal stage overall in the game.<br>
+			</li><br>
+			<li onClick="location.href='stages/fd.html'"><img class="charImg" src="images/stages/icons/fd.png"> Final Destination</li>
+			<li class="info">			
+				<b>Blast Zone Height:</b> 188 (3rd)<br>
+				<b>Blast Zone Width:</b> 492 (5th)<br>
+				<b>Stage Element:</b> No platforms<br>
+				<b>Note:</b> The lack of platforms make the stage combo- and grab- heavy.<br>	
+			</li><br>					
+			<li onClick="location.href='stages/fod.html'"><img class="charImg" src="images/stages/icons/fod.png"> Fountain of Dreams</li>
+			<li class="info">
+				<b>Blast Zone Height:</b> 202 (5th)<br>
+				<b>Blast Zone Width:</b> 396 (2nd)<br>
+				<b>Stage Element:</b> Lowering and heightening side platforms<br>		
+				<b>Note:</b> Narrow, but high blast zones. The varying platform heights may hinder or improve combos and movements of players.<br>	
+			</li><br>
+			<li onClick="location.href='stages/ps.html'"><img class="charImg" src="images/stages/icons/ps.png"> Pokemon Stadium</li>
+			<li class="info">
+				<b>Blast Zone Height:</b> 180 (2nd)<br>
+				<b>Blast Zone Width:</b> 460 (4nd)<br>
+				<b>Stage Element:</b> Transform into Rock, Water, Fire, and Grass Stages<br>		
+				<b>Note:</b> Its transformations may skew a match-up heavily in favour of another player compared to its neutral form.<br>				
+			</li><br>
+			<li onClick="location.href='stages/ys.html'"><img class="charImg" src="images/stages/icons/ys.png"> Yoshi's Story </li>
+			<li class="info">
+				<b>Blast Zone Height:</b> 168 (1st)<br>
+				<b>Blast Zone Width:</b> 348 (1st)<br>
+				<b>Stage Element:</b> Shy Guys, Lakitu's Cloud<br>		
+				<b>Note:</b> Smallest legal stage overall in the game.<br>				
+			</li><br>
+			<br><br>
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>

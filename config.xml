@@ -37,6 +37,7 @@
   <icon src="www/res/icon/windows-phone/icon-173-tile.png" gap:platform="winphone" gap:role="background"/>
   
   <gap:plugin name='org.crosswalk.engine' version='1.3.0' source='pgb' />
+  <gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />
 
   <gap:splash src="www/res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="port-ldpi"/>
   <gap:splash src="www/res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="port-mdpi"/>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Frame Melee</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+	<meta name="author" content="Renard Tumbokon, kerblaster" />
+	<meta name="description" content="Frame data on all characters of Super Smash Bros Melee" />
+	<link rel="shortcut icon" href="../images/fav.ico" />
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="scripts.js"></script>
+	<script type="text/javascript" src="http://debug.phonegap.com/target/target-script-min.js#82edbab2-16de-11e5-83d9-6abe55c5a606"></script>
+	<script type="text/javascript" src="iscroll.js"></script>
+	<script src="admob.js"></script>
+	<script src="phonegap.js"></script>
+</head>
+
+<body onload="iscroll()">
+<div id="header"> Frame Melee
+		<div id="description" > <!--bar displays description-->
+			<img id="floatLeft" onclick="parent.location='index.html'" src="images/logo.png"/>
+			<img id="floatRight" onClick="location.href='index.html'" src="images/back_header.png"></img>
+			<span id="status">Instructions</span>
+		</div>
+</div>
+<!--^--HEADER--//--BODY--v-->
+<div id="wrapper">
+	<div id="scroller">
+		<br><br><br><br>
+		<ul id="text">
+			<li><u>Main Menu</u>
+				<ul>
+					<li>Single View: Utilizes entire screen for single character frame parsing.</li>
+					<li>Split View: Splits the screen into two equal windows for double character frame parsing.</li>
+					<li>Stat Rankings: Displays a list of common character properties.</li>
+					<li>Instructions: You are here.</li>
+					<li>Donate: Links to paypal where users who appreciate this app can support it.</li>
+					<li>Home/Logo: Go back to main menu</li>
+					<li>Credits: Gives a special thanks to a certain group of people whom this application could not be done without. A donation link can be found here.</li>
+				</ul>
+			</li>	
+			<hr>
+			<li><u>Character/Action selection</u>
+				<ul>
+					<li>Select one of the 26 available characters in Super Smash Bros Melee.</li>
+					<li>After selecting a character, user is brought to choose an action.</li>
+					<li>Movement has statistics specific for that character</li>
+					<li>Smashes, aerials, basic attacks, and specials can be clicked on to view the action specific frame data.</li>
+					<li>Refresh button: brings all windows back to character selection.</li>
+				</ul>			
+			</li>
+			<hr>
+			<li><u>Frame Analysis</u>
+				<ul>
+					<li><b>Important: Wait for image load to complete before pressing any of the control buttons to avoid playback issues.</b></li>
+					<li>Top left text:
+						<ul>
+							<li>Character name: action</li>
+							<li>Current frame state</li>
+							<li>Current frame / Total frames</li>
+						</ul>			
+					</li>
+					<li>Top right images:
+						<ul>
+							<li>Character image: click to view recorded frame data for specified action</li>
+							<li>Back image: button to go back to ability select</li>
+						</ul>						
+					</li>
+					<li>
+						<ul>Control Buttons:
+							<li><b>Play:</b> Play action on repeat from current frame.</li>
+							<li><b>Pause:</b> Pause action when on play, freezes on current frame.</li>
+							<li><b>Restart:</b> Restart action from frame 1.</li>
+							<li><b>Forwards:</b> Go forward 1 frame.</li>
+							<li><b>Backwards:</b> Go rewind 1 frame.</li>
+							<li><b>Progress bar:</b> Green bar that displays the percentage of the current frame in relation to total frames</li>
+						</ul>						
+					</li>
+					<li>
+						<ul>Image of Action
+							<li>Image of character in action with its hitboxes, hurtboxes, state, etc.</li>
+							<li>**Drag image left to rewind frames</li>
+							<li>**Drag image right to fast forward frames</li>
+						</ul>						
+					</li>
+				</ul>			
+			</li>
+			<hr>
+			<li><u>Term Clarification</u>
+				<ul>
+					<li><b>Walk Speed:</b> Slow ground movement in which a character can move while still being actionable to smashes and tilts.</li>
+					<li><b>Run Speed:</b> Fast ground movement after a dash in which a character cannot smash or tilt unless in full stop.</li>
+					<li><b>Stop Speed:</b> How many frames it would take to be standing still and fully actionable after running.</li>
+					<li><b>Turn Speed:</b> How many frames it would take to be moving the opposite direction while running.</li>
+					<li><b>Dash Speed:</b> Burst of speed where a character can change directions in 1 frame.</li>
+					<li><b>Dash to Run:</b> Number of frames from the start of a dash where the dash becomes a run.</li>
+					<li><b>Dash Dance Length:</b> Speed of dash in relation to dash frames.</li>
+					<li><b>Heaviness:</b> How much % it takes to be K.O vertically from the ceiling.</li>
+					<li><b>Avg Fall Speed:</b> Factor in falling acceleration and top speed to how fast a character falls from the air.</li>
+					<li><b>Fast Fall Speed:</b> Gains a faster fall speed when a user taps down on the control stick.</li>
+					<li><b>Short Jump Height:</b> Height where a user release jump at least 2 frames before being in the air.</li>
+					<li><b>Jump Speed:</b> How many frames a character will be airborne after pressing jump.</li>
+					<li><b>Aerial Move Speed:</b> The horizontal speed in which a character can move in the air.</li>
+					<li><b>Wavedash Distance:</b> (Traction) Distance of how far a character's single wavedash is. Wave dashing is a move where a character jumps and airdodges diagonally</li>
+					<li><b>Grab Range:</b> How far a character lunges for a grab while standing still.</li>
+					<li><b>Shield Size:</b> How big the shield of a character initially is. Not taking the body:shield ratio into consideration.</li>
+					<li><b>Dodges, Rolls:</b> Invulnerability frames out of how many frames the entire action takes.</li>
+					<li><b>Hitbox:</b> When in contact with a hurtbox, the owner of the hurtbox gets 'hit'.</li>
+					<li><b>Hurtbox:</b> Area of the body in which the owner can be vulnerable to hitboxes.</li>
+					<li><b>Invulnerable:</b> Cannot be hit.</li>
+					<li><b>Shot:</b> Projectile comes out.</li>
+					<li><b>IASA:</b> (Interruptible As Soon As) Can begin a new action during interruptible frames even if the full animation of the previous action is not yet completed. Some interruptible frames may only be interrupted by certain actions.</li>
+					<li><b>Auto-Cancel:</b> Landing at the start or end of some aerial attacks may produce only 4-5 frames of jump lag, instead of its full landing lag.</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+
+</body>
+</html>

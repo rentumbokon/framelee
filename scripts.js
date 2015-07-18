@@ -1,5 +1,10 @@
 var gif1;	//gif var to be accessible to other functions
-function onload(character,action){
+var saveChar;
+var saveAction;
+
+function onload(character,action){	//character and action are proper
+	saveChar = character;
+	saveAction = action;
 	document.getElementById("charName").innerHTML = character + ":";
 	document.getElementById("actionName").innerHTML = action;
 	var trans_char = translateChar(character);
@@ -16,7 +21,7 @@ function iscroll(){	//scroll gracefully
 	var myScroll;
 	loaded();
 	function loaded () {
-		myScroll = new IScroll('#wrapper', { mouseWheel: true, click: true });
+		myScroll = new IScroll('#wrapper', { scrollX: true, mouseWheel: true, click: true });
 	}
 	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 }
@@ -70,7 +75,7 @@ function getTotalFrames(){
 		var isLoaded = gif1.get_loading;
 		if (isLoaded){
 			var totalFrameNum = gif1.get_length();
-			document.getElementById("totalFrames").innerHTML = "/" + totalFrameNum;
+			document.getElementById("totalFrames").innerHTML = "/ " + totalFrameNum;
 		}
 	},16);
 }
@@ -78,7 +83,7 @@ function getCurrentFrame(){
 	setInterval(function(){ 
 		var onFrameNum = gif1.get_current_frame() + 1; //+1 important
 		if (onFrameNum == 0){
-			document.getElementById("currFrame").innerHTML = "loading...";
+			document.getElementById("currFrame").innerHTML = "loading";
 		}
 		else{
 			if (onFrameNum < 10){
@@ -86,6 +91,10 @@ function getCurrentFrame(){
 			}
 			document.getElementById("currFrame").innerHTML = onFrameNum;	
 		}
+	//bar graph function
+		framePercent = ((gif1.get_current_frame()+1)/gif1.get_length())*100;
+		//console.log("framePercent: " + framePercent);
+		document.getElementById("barGraph").style.width = framePercent+"%";
 	}, 16);
 }
 /////////////////////////

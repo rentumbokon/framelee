@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Frame Melee</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, user-scalable=0" />
+	<meta name="author" content="Renard Tumbokon, kerblaster" />
+	<meta name="description" content="Frame data on all characters of Super Smash Bros Melee" />
+	<link rel="shortcut icon" href="../../images/fav.ico" />
+	<link rel="stylesheet" type="text/css" href="../../style.css" />
+	<script type="text/javascript" src="../../scripts.js"></script>
+	<script src="../../phonegap.js"></script>
+	<script type="text/javascript" src="../../libgif.js"></script>
+	<script type="text/javascript" src="../../rubbable.js"></script>
+	<script>
+		var popupOpen = false;
+		function popupInfo(){
+			if (popupOpen == false){	
+				//is closed -> open popup
+				document.getElementById("info").innerHTML = ""+
+				"<u>"+saveChar+" - "+saveAction+"</u><br>"+
+//---EDIT FRAME INFO---//
+//
+				"Hit: 6-11<br>"+
+				"IASA: 36<br>"+
+				"Charge frame: 2<br>"+
+				"Total: 39";
+//
+//---------------------//
+				document.getElementById("info").style.display = "block";
+				popupOpen = true;
+			}
+			else if (popupOpen == true){	
+				//is open -> close popup
+				document.getElementById("info").style.display = "none";
+				popupOpen = false;
+			}
+		}
+		function updateTextColor(){
+			setInterval(function(){
+				var currFrame = document.getElementById("currFrame").innerHTML;
+				if (currFrame == "00" || currFrame == "01" || currFrame == "02" || currFrame == "03" || currFrame == "04" || 
+					currFrame == "05" || currFrame == "06" || currFrame == "07" || currFrame == "08" || currFrame == "09"){
+						currFrame = currFrame.slice(1);	//turn 01->1
+				}
+				currFrame = parseInt(currFrame);
+//---EDIT FRAME DATA---//
+//
+				if (currFrame >= 36){
+					document.getElementById("currFrame").style.color = "green";
+					document.getElementById("stateName").innerHTML = "Interruptable";				
+				}
+				else if ((currFrame >= 6 && currFrame <= 11)){
+					//hitbox
+					document.getElementById("currFrame").style.color = "red";
+					document.getElementById("stateName").innerHTML = "Hitbox";
+				}
+				else{
+					//vulnerable
+					document.getElementById("currFrame").style.color = "white";
+					document.getElementById("stateName").innerHTML = "Vulnerable";
+				}
+//
+//---------------------//
+			},16);
+		}
+	</script>
+</head>
+<!--EDIT PROPER FULL TEXT (char,action)-->
+<!---->
+	<body onload="onload('Ice Climbers','Down Smash');updateTextColor();"> 
+<!---->
+<!---------------------------------->
+		<div id="info" class="bubble"></div>
+		<div id="labFloatLeft"> 
+			<p id="charName">Name:</p>
+			<p id="actionName">Action</p><br>
+			<p id="stateName">State</p><br>
+			<p id="currFrame">0</p> <p id="totalFrames">/ 0</p><br>	
+		</div>
+		<img id="charIcon" src="../../images/silhouette.png" onclick="popupInfo()"> 		
+		<img id="backIcon" src="../../images/back.png" onclick="location.href='../moveset.html'">		
+		<div id="gifDiv">				
+<!--EDIT GIF URL-->
+<!---->
+			<img id="gifFrame" src="../../images/unknown.png" rel:animated_src="https://i.imgur.com/vZGbUd0.gif" rel:auto_play="0" rel:rubbable="1"/>
+<!---->
+<!---------------->
+		</div>
+		<div id="barGraph"></div>
+		<div id="footerControls">
+			<a href="javascript:;" onmousedown="gif1.play(); return false;"><img id="playButton" src="../../images/controls/play.png"></a>
+			<a href="javascript:;" onmousedown="gif1.pause(); return false;"><img id="pauseButton" src="../../images/controls/pause.png"></a>
+			<a href="javascript:;" onmousedown="gif1.move_to(0); return false;"><img id="restartButton" src="../../images/controls/restart.png"></a>
+			<a href="javascript:;" onmousedown="gif1.move_relative(1); return false;"><img id="forwardsButton" src="../../images/controls/forwards.png"></a>
+			<a href="javascript:;" onmousedown="gif1.move_relative(-1); return false;"><img id="backwardsButton" src="../../images/controls/backwards.png"></a>
+		</div>
+	</body>
+</html>

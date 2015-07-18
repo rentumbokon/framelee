@@ -70,12 +70,13 @@ hr{
 	left: 0;
 	width: 100%;
 	height: 20px;
-	background: #00ec00;
-	color: black;
+	background-image:-webkit-gradient(linear, left top, left bottom, from(#555555), to(#111111));
+	color: white;
 	padding-top:3px;
 	border-top: 1px solid #444;
 	font-size: 12px;
 	text-align:center;
+	font-weight: bold;
 }
 
 #status{
@@ -111,19 +112,18 @@ hr{
 	top:60px;
 	z-index:2;
 	text-align: center;
-	position: absolute;
 	width:100%;
 }
 
 .button{
-	/*background-image: url('images/button.png');*/
-	background: transparent;
+	background: #111111;
 	position: relative;
 	display: block;
 	background-repeat: no-repeat;
 	background-size: cover; /*fill*/
 	color: #00ec00;
-	width: 80%;
+	width: 100%; /*was 90% with left 5%*/
+	left:0; /*was 5% with width 5% (width+left*2=100)*/
 	padding-top:35px; /*px top of button to text*/
 	height: 100px; /*height of button*/
 	top:0;
@@ -131,7 +131,6 @@ hr{
 	font-size:30px;
 	text-align:center;
 	font-weight:bold;
-	left:10%;
 }
 
 .leftBracket
@@ -191,16 +190,69 @@ hr{
 	width: 100%;
 	text-align:right;
 }
-
 #scroller li {
 	padding: 0 10px;
 	height: 50px;
 	line-height: 50px; /*equal to height*/
-	background-color: #000;
-	font-size: 50px;
+	background-color: #111;
+	font-size: 30px;
 	color: #00ec00;
 	border: 1px solid #FFF;
 	/*text-indent: 20%;*/
+}
+
+#rank li {
+	text-align: left;
+	border: 0;
+	background-color: black;
+}
+#rank img {
+	display: inline;
+	height: 48px;
+	width: 48px;
+}
+#rank div{
+	position: relative;
+	top: -45px;
+	left: 125px;
+	z-index: 999;
+	width: inherit;
+}
+
+#text ul{
+	list-style-type: none;
+	color: white;
+	padding: 0;
+	margin: 0;
+	width: auto;
+	text-align:left;	
+}
+#text li {	
+	background-color: black;
+	text-align: left;
+	line-height: 150%; 
+	color: white;
+	font-size: 15px;
+	border: 0;
+	height: auto;
+	padding-left: 25px;
+	text-indent: -15px;
+}
+#scroller p{ /*credits*/
+	font-size: 15px;
+	color: white;
+}
+#stage{
+	width: 100%;
+	height: 100%;
+}
+.info{
+	color: white !important;
+	text-align: left !important;
+	font-size: 15px !important;
+	height: auto !important;
+	line-height: 20px !important;
+	padding:10px !important;
 }
 
 .charImg {
@@ -221,20 +273,35 @@ hr{
 .listTitle{	
 	/*override iscroll css*/
 	color: white !important;
+	background-color: black !important;
 	font-size:25px !important;
 	border:0 !important;
 	border-bottom:1px solid #FFF !important;
-	text-align:center;
+	text-align:center !important;
 }
 
 .listSubtitle{
 	/*override iscroll css*/
 	color: white !important;
+	background-color: black !important;
 	font-size:25px !important;
 	border:0 !important; 
 	border-bottom:1px solid #FFF !important;
 	text-align:left;
 	font-style: italic;
+}
+
+.movement{
+	text-align: left !important;
+	color: white !important;
+	font-size:12px !important;
+	height:20px !important;
+	line-height: 20px !important;
+}
+
+h1{ /*for movement*/
+	color: #00ec00;
+	display: inline;
 }
 
 #singleFrame{
@@ -282,18 +349,7 @@ hr{
 	color:white;
 	font-size:20px;
 	line-height:25px;
-	z-index:99999;
-}
-
-#charIcon{
-	position: absolute;
-	display:inline;
-	height: 30px;
-	width: 30px;
-	float: right;
-	top: 35px;
-	right: 2px;
-	z-index:99999;
+	z-index:9;
 }
 
 #charName{
@@ -303,6 +359,11 @@ hr{
 }
 
 #actionName{
+	position: relative;
+	display:inline;
+}
+
+#stateName{
 	position: relative;
 	display:inline;
 }
@@ -317,16 +378,79 @@ hr{
 	display:inline;
 }
 
-#backIcon{
+#charIcon{
 	position: absolute;
-	display: inline;
-	height: 30px;
-	width: 30px;
-	height: 30px;
+	display:block; /*makes new line (no br in html)*/
+	height: 60px;
+	width: 60px;
 	float: right;
 	top: 2px;
 	right: 2px;
+	z-index:999;
+}
+#backIcon{
+	position: absolute;
+	display:inline;
+	height: 60px;
+	width: 60px;
+	float: right;
+	top: 62px;
+	right: 2px;
+	z-index:999;
+}
+
+.backFloatRight{
+	position: absolute;
+	right: 1px;
+	height: 48px;
+	width: 48px;
+}
+
+#barGraph{
+	bottom:61px;
+	left:0;
+	height:5px;
+	width:100%;
+	background:#00ec00;
+	position:absolute;
 	z-index:99999;
+}
+/*chat bubble*/
+.bubble 
+{
+	color:black;
+	font-weight: bold;
+	position: absolute;
+	width: 300px;
+	height: 200px;
+	padding: 20px;
+	background: #FFFFFF;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	top:10px;
+	right:75px;
+	z-index:9999;
+	opacity:0.97;
+	filter:alpha(opacity=97); /* For IE8 and earlier */
+}
+
+.bubble:after 
+{
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 10px 0 10px 25px;
+	border-color: transparent #FFFFFF;
+	display: block;
+	width: 0;
+	z-index: 1;
+	right: -25px;
+	top: 16px;
+}
+
+#info{
+	display:none;
 }
 
 /*Button controls*/
