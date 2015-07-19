@@ -2,7 +2,10 @@
   <name>Frame Melee</name>
   <description>Frame data on all characters of Super Smash Bros Melee</description>
   <author href="http://www.twitter.com/kerblaster" email="kerblaster@hotmail.com">Renard Tumbokon</author>
-  <content src="index.html"/>
+  Added this to config.xml 
+	< access origin="*"/> 
+	< access origin=".*"/> 
+	< access origin="127.0.0.1*"/> 
   
   <preference name='phonegap-version' value='cli-5.1.1' />
   
@@ -50,9 +53,6 @@
   <gap:splash src="www/res/screen/ios/screen-ipad-portrait.png" gap:platform="ios" width="768" height="1024"/>
   <gap:splash src="www/res/screen/ios/screen-ipad-landscape.png" gap:platform="ios" width="1024" height="768"/>
   <gap:splash src="www/res/screen/windows-phone/screen-portrait.jpg" gap:platform="winphone"/>
- 
-  <access origin="*" subdomains="true" />
-  <access uri="*" subdomains="true" />
   
   <plugin name="cordova-plugin-whitelist" version="1"/>
   <allow-intent href="http://*/*"/>
