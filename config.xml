@@ -2,9 +2,9 @@
   <name>Frame Melee</name>
   <description>Frame data on all characters of Super Smash Bros Melee</description>
   <author href="http://www.twitter.com/kerblaster" email="kerblaster@hotmail.com">Renard Tumbokon</author>
-	< access origin="*"/> 
-	< access origin=".*"/> 
-	< access origin="127.0.0.1*"/> 
+	<access origin="*"/> 
+	<access origin=".*"/> 
+	<access origin="127.0.0.1*"/> 
   
   <preference name='phonegap-version' value='cli-5.1.1' />
   
