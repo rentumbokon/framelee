@@ -23,8 +23,8 @@
 //
 				"Hit: 3-4<br>"+
 				"IASA: 19<br>"+
-				"Window of jab 3: 1-20"+
-				"Jab 3 starts: 6"+
+				"Window of jab 3: 1-20<br>"+
+				"Jab 3 starts: 6<br>"+
 				"Total: 20";
 //
 //---------------------//
@@ -47,7 +47,7 @@
 				currFrame = parseInt(currFrame);
 //---EDIT FRAME DATA---//
 //
-				if ((currFrame <= 19)){
+				if ((currFrame >= 19)){
 					//hitbox
 					document.getElementById("currFrame").style.color = "green";
 					document.getElementById("stateName").innerHTML = "Interruptable";

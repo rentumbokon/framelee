@@ -3,6 +3,9 @@ var saveChar;
 var saveAction;
 
 function onload(character,action){	//character and action are proper
+	//resize info bubble to fit width
+	document.getElementById("info").offsetWidth = (window.innerWidth-80) + "px";	//75 right + 5 left
+	//save char and action
 	saveChar = character;
 	saveAction = action;
 	document.getElementById("charName").innerHTML = character + ":";
