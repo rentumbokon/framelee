@@ -15,7 +15,7 @@
 	<script src="phonegap.js"></script>
 </head>
 
-<body onload="iscroll()">
+<body onload="iscroll();onLoadAd();">
 <div id="header"> Frame Melee
 		<div id="description" > <!--bar displays description-->
 			<img id="floatLeft" onclick="parent.location='index.html'" src="images/logo.png"/>
@@ -30,6 +30,7 @@
 		<ul>
 			<li class="listTitle">Choose a statistic:</li><br>
 			<li onClick="location.href='ranking/shield_size.html'">Shield Size</li><br>	
+			<li onClick="location.href='ranking/grab_range.html'">Grab Range</li><br>	
 			<li onClick="location.href='ranking/forward_roll_distance.html'">Forward Roll</li><br>	
 			<li onClick="location.href='ranking/backward_roll_distance.html'">Backward Roll</li><br>	
 			<li onClick="location.href='ranking/heaviness.html'">Heaviness</li><br>

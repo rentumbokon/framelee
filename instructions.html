@@ -15,7 +15,7 @@
 	<script src="phonegap.js"></script>
 </head>
 
-<body onload="iscroll()">
+<body onload="iscroll();onLoadAd();">
 <div id="header"> Frame Melee
 		<div id="description" > <!--bar displays description-->
 			<img id="floatLeft" onclick="parent.location='index.html'" src="images/logo.png"/>
@@ -28,7 +28,7 @@
 	<div id="scroller">
 		<br><br><br><br>
 		<ul id="text">
-			<li>Internet connection required to load images of frame data only.</li><br>
+			<li style="color:red;">Internet connection required to load images of frame data only.</li><br>
 			<li><u>Main Menu</u>
 				<ul>
 					<li>Single View: Utilizes entire screen for single character frame parsing.</li>
@@ -73,7 +73,7 @@
 						<ul>Control Buttons:
 							<li><b>Play:</b> Play action on repeat from current frame.</li>
 							<li><b>Pause:</b> Pause action when on play, freezes on current frame.</li>
-							<li><b>Restart:</b> Restart action from frame 1.</li>
+							<li><b>Restart:</b> Restart action starting at frame 1.</li>
 							<li><b>Forwards:</b> Go forward 1 frame.</li>
 							<li><b>Backwards:</b> Go rewind 1 frame.</li>
 							<li><b>Progress bar:</b> Green bar that displays the percentage of the current frame in relation to total frames</li>
@@ -91,7 +91,7 @@
 			<hr>
 			<li><u>Term Clarification</u>
 				<ul>
-					<li><b>Walk Speed:</b> Slow ground movement in which a character can move while still being actionable to smashes and tilts.</li>
+					<li><b>Walk Speed:</b> Slow ground movement in which a character can move while still being able to smash and tilt.</li>
 					<li><b>Run Speed:</b> Fast ground movement after a dash in which a character cannot smash or tilt unless in full stop.</li>
 					<li><b>Stop Speed:</b> How many frames it would take to be standing still and fully actionable after running.</li>
 					<li><b>Turn Speed:</b> How many frames it would take to be moving the opposite direction while running.</li>
@@ -100,7 +100,7 @@
 					<li><b>Dash Dance Length:</b> Speed of dash in relation to dash frames.</li>
 					<li><b>Heaviness:</b> How much % it takes to be K.O vertically from the ceiling.</li>
 					<li><b>Avg Fall Speed:</b> Factor in falling acceleration and top speed to how fast a character falls from the air.</li>
-					<li><b>Fast Fall Speed:</b> Gains a faster fall speed when a user taps down on the control stick.</li>
+					<li><b>Fast Fall Speed:</b> Gains a faster fall speed when a user taps down on the control stick while in the air.</li>
 					<li><b>Short Jump Height:</b> Height where a user release jump at least 2 frames before being in the air.</li>
 					<li><b>Jump Speed:</b> How many frames a character will be airborne after pressing jump.</li>
 					<li><b>Aerial Move Speed:</b> The horizontal speed in which a character can move in the air.</li>
@@ -116,6 +116,15 @@
 					<li><b>Auto-Cancel:</b> Landing at the start or end of some aerial attacks may produce only 4-5 frames of jump lag, instead of its full landing lag.</li>
 				</ul>
 			</li>
+			<li><u>Stages - Symbol Representation</u>
+				<ul>
+					<li><b>Outer yellow box:</b> Blast zones</li>
+					<li><b>Inner blue box:</b> Camera limit</li>
+					<li><b>Yellow + :</b> Item spawn points</li>
+					<li><b>Blue + :</b> Character spawn points</li>
+					<li><b>Green + :</b> Character respawn point</li>
+				</ul>
+			</li>			
 		</ul>
 	</div>
 </div>
