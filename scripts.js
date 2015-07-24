@@ -8,7 +8,7 @@ function onload(character,action){	//character and action are proper
 	//save char and action
 	saveChar = character;
 	saveAction = action;
-	document.getElementById("charName").innerHTML = character + ":";
+	//document.getElementById("charName").innerHTML = character + ":";
 	document.getElementById("actionName").innerHTML = action;
 	var trans_char = translateChar(character);
 	//var trans_action = translateAction(action);
@@ -146,7 +146,7 @@ function translateAction(action){
 	else if (action == "Down Smash"){
 		return "dsmash";
 	}
-	else if (action == "Forward Smash"){
+	else if (action == "Frwrd Smash"){
 		return "fsmash";
 	}
 	else if (action == "Neutral Aerial"){

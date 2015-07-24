@@ -195,7 +195,7 @@ hr{
 	height: 50px;
 	line-height: 50px; /*equal to height*/
 	background-color: #111;
-	font-size: 30px;
+	font-size: 20px;
 	color: #00ec00;
 	border: 1px solid #FFF;
 	/*text-indent: 20%;*/
@@ -352,15 +352,16 @@ h1{ /*for movement*/
 	z-index:9;
 }
 
-#charName{
+#charName{ /*disabled by design choice*/
 	position: relative;
-	display:inline;
+	display:block;
 	color: #00ec00;
 }
 
 #actionName{
 	position: relative;
 	display:inline;
+	color: #00ec00;
 }
 
 #stateName{
@@ -413,7 +414,7 @@ h1{ /*for movement*/
 	width:100%;
 	background:#00ec00;
 	position:absolute;
-	z-index:99999;
+	z-index:999;
 }
 /*chat bubble*/
 .bubble 

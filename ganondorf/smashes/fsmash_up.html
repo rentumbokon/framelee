@@ -18,7 +18,7 @@
 			if (popupOpen == false){	
 				//is closed -> open popup
 				document.getElementById("info").innerHTML = ""+
-				"<u>"+saveChar+" - "+saveAction+"</u><br>"+
+				"<u>"+saveChar+"</u><br><i> &#8627; "+saveAction+"</i><br>"+
 //---EDIT FRAME INFO---//
 //
 				"Hit: 20-24<br>"+
@@ -51,7 +51,7 @@
 					document.getElementById("currFrame").style.color = "green";
 					document.getElementById("stateName").innerHTML = "Interruptable";
 				}
-				else if ((currFrame >= 18 && currFrame <= 21)){
+				else if ((currFrame >= 20 && currFrame <= 24)){
 					//hitbox
 					document.getElementById("currFrame").style.color = "red";
 					document.getElementById("stateName").innerHTML = "Hitbox";
@@ -69,12 +69,12 @@
 </head>
 <!--EDIT PROPER FULL TEXT (char,action)-->
 <!---->
-	<body onload="onload('Ganondorf','F-Smash Up');updateTextColor();"> 
+	<body onload="onload('Ganondorf','Frwrd Smash (up)');updateTextColor();"> 
 <!---->
 <!---------------------------------->
 		<div id="info" class="bubble"></div>
 		<div id="labFloatLeft"> 
-			<p id="charName">Name:</p>
+			<!--<p id="charName">Name:</p>-->
 			<p id="actionName">Action</p><br>
 			<p id="stateName">State</p><br>
 			<p id="currFrame">0</p> <p id="totalFrames">/ 0</p><br>	
