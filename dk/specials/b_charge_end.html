@@ -22,7 +22,7 @@
 //---EDIT FRAME INFO---//
 //
 				"Hit: 17-21<br>"+
-				"Invulnerability: 17-18"+
+				"Invulnerability: 17-18<br>"+
 				"Total: 46";
 //
 //---------------------//
@@ -45,11 +45,16 @@
 				currFrame = parseInt(currFrame);
 //---EDIT FRAME DATA---//
 //
-				if (currFrame >= 17 || currFrame <= 21){
+				if (currFrame >= 17 && currFrame <= 21){
 					//hitbox
 					document.getElementById("currFrame").style.color = "red";
 					document.getElementById("stateName").innerHTML = "Hitbox";
 				}
+				else{
+					//vulnerable
+					document.getElementById("currFrame").style.color = "white";
+					document.getElementById("stateName").innerHTML = "Vulnerable";
+				}				
 //
 //---------------------//
 			},16);
@@ -73,7 +78,7 @@
 		<div id="gifDiv">				
 <!--EDIT GIF URL-->
 <!---->
-			<img id="gifFrame" src="../../images/unknown.png" rel:animated_src="http://i.imgur.com/kYejIOV.gif" rel:auto_play="0" rel:rubbable="1"/>
+			<img id="gifFrame" src="../../images/unknown.png" rel:animated_src="http://i.imgur.com/L8s4wF6.gif" rel:auto_play="0" rel:rubbable="1"/>
 <!---->
 <!---------------->
 		</div>

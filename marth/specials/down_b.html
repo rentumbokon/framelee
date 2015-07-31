@@ -21,12 +21,12 @@
 				"<u>"+saveChar+"</u><br><i> &#8627; "+saveAction+"</i><br>"+
 //---EDIT FRAME INFO---//
 //
-				"Counter: 4-27<br>"+
+				"Counter: 6-30<br>"+
 				"Hit: 14-20<br>"+
 				"(+1 frame for strong moves)<br>"+
 				"Post-hit inv: 1-16<br>"+
 				"Total: 59 (miss)<br>"+
-				"Total: 46 (hit)<br>";
+				"Total: 46 (hit)";
 //
 //---------------------//
 				document.getElementById("info").style.display = "block";
@@ -48,7 +48,7 @@
 				currFrame = parseInt(currFrame);
 //---EDIT FRAME DATA---//
 //
-				if ((currFrame >= 1)&&(currFrame <= 16)){
+				if (currFrame >= 6 && currFrame <= 30){
 					//hitbox
 					document.getElementById("currFrame").style.color = "cyan";
 					document.getElementById("stateName").innerHTML = "Inv Counter";
@@ -81,7 +81,7 @@
 		<div id="gifDiv">				
 <!--EDIT GIF URL-->
 <!---->
-			<img id="gifFrame" src="../../images/unknown.png" rel:animated_src="http://i.imgur.com/Wdl3chd.gif" rel:auto_play="0" rel:rubbable="1"/>
+			<img id="gifFrame" src="../../images/unknown.png" rel:animated_src="http://i.imgur.com/cofnORy.gif" rel:auto_play="0" rel:rubbable="1"/>
 <!---->
 <!---------------->
 		</div>

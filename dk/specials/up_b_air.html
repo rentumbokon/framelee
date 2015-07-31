@@ -46,10 +46,15 @@
 				currFrame = parseInt(currFrame);
 //---EDIT FRAME DATA---//
 //
-				if ((currFrame >= 2 && currFrame <= 5)||(currFrame >= 11 && currFrame <= 66)){
+				if ((currFrame >= 2 && currFrame <= 5)){
 					//hitbox
 					document.getElementById("currFrame").style.color = "red";
-					document.getElementById("stateName").innerHTML = "Hitbox";
+					document.getElementById("stateName").innerHTML = "Hitbox + Invulnerable";
+				}
+				else if ((currFrame >= 11 && currFrame <= 66)){
+					//hitbox
+					document.getElementById("currFrame").style.color = "red";
+					document.getElementById("stateName").innerHTML = "Hitbox";				
 				}
 				else{
 					//vulnerable
@@ -79,7 +84,7 @@
 		<div id="gifDiv">				
 <!--EDIT GIF URL-->
 <!---->
-			<img id="gifFrame" src="../../images/unknown.png" rel:animated_src="http://i.imgur.com/6P17fhH.gif" rel:auto_play="0" rel:rubbable="1"/>
+			<img id="gifFrame" src="../../images/unknown.png" rel:animated_src="http://i.imgur.com/HojbU7r.gif" rel:auto_play="0" rel:rubbable="1"/>
 <!---->
 <!---------------->
 		</div>

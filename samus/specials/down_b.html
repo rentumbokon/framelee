@@ -25,7 +25,7 @@
 				"Bomb lasts: 73<br>"+
 				"Bomb damage lasts: 11<br>"+
 				"Cancel by crouching: 46-53<br>"+
-				"Bombjump interruptable: 2/53<br>"+
+				"Bombjump interruptable: 2 (lasts 53)<br>"+
 				"Total: 53<br>";
 //
 //---------------------//
@@ -48,14 +48,10 @@
 				currFrame = parseInt(currFrame);
 //---EDIT FRAME DATA---//
 //
-				if ((currFrame >= 4)&&(currFrame <= 21)){
+				if ((currFrame == 10){
 					//hitbox
-					document.getElementById("currFrame").style.color = "white";
-					document.getElementById("stateName").innerHTML = "Reflects/Jump Cancelable";
-				}
-				else if (currFrame == 1){
-					document.getElementById("currFrame").style.color = "white";
-					document.getElementById("stateName").innerHTML = "Hit/Invulnerable";
+					document.getElementById("currFrame").style.color = "red";
+					document.getElementById("stateName").innerHTML = "Lay bomb";
 				}
 				else{
 					//vulnerable

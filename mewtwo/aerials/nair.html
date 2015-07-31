@@ -47,16 +47,16 @@
 				currFrame = parseInt(currFrame);
 //---EDIT FRAME DATA---//
 //
-				if ((currFrame <= 5)||(currFrame >= 37)){
-					//auto-cancelable
-					document.getElementById("currFrame").style.color = "white";
-					document.getElementById("stateName").innerHTML = "Auto Cancelable";
-				}
-				else if ((currFrame >= 5 && currFrame <= 6)||(currFrame >= 9 && currFrame <= 10)||(currFrame >= 13 && currFrame <= 14), (currFrame >= 17 && currFrame <= 18)||(currFrame >= 21 && currFrame <= 22)||(currFrame >= 25 && currFrame <= 26)||(currFrame >= 29 && currFrame <= 30)||(currFrame >= 33 && currFrame <= 34)||(currFrame >= 37 && currFrame <= 38)){
+				if ((currFrame >= 5 && currFrame <= 6)||(currFrame >= 9 && currFrame <= 10)||(currFrame >= 13 && currFrame <= 14)||(currFrame >= 17 && currFrame <= 18)||(currFrame >= 21 && currFrame <= 22)||(currFrame >= 25 && currFrame <= 26)||(currFrame >= 29 && currFrame <= 30)||(currFrame >= 33 && currFrame <= 34)||(currFrame >= 37 && currFrame <= 38)){
 					//hitbox
 					document.getElementById("currFrame").style.color = "red";
 					document.getElementById("stateName").innerHTML = "Hitbox";
 				}
+				else if ((currFrame <= 5)||(currFrame >= 37)){
+					//auto-cancelable
+					document.getElementById("currFrame").style.color = "white";
+					document.getElementById("stateName").innerHTML = "Auto Cancelable";
+				}				
 				else{
 					//vulnerable
 					document.getElementById("currFrame").style.color = "white";

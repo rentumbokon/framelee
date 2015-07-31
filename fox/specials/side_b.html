@@ -51,7 +51,12 @@
 				currFrame = parseInt(currFrame);
 //---EDIT FRAME DATA---//
 //
-				if ((currFrame >= 22 && currFrame <= 25)){
+				if ((currFrame >= 22 && currFrame <= 24)){
+					//Hitbox
+					document.getElementById("currFrame").style.color = "red";
+					document.getElementById("stateName").innerHTML = "Hitbox + Can Shorten";
+				}
+				else if ((currFrame >= 22 && currFrame <= 25)){
 					//Hitbox
 					document.getElementById("currFrame").style.color = "red";
 					document.getElementById("stateName").innerHTML = "Hitbox";

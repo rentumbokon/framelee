@@ -21,9 +21,9 @@
 				"<u>"+saveChar+"</u><br><i> &#8627; "+saveAction+"</i><br>"+
 //---EDIT FRAME INFO---//
 //
-				"Hit: 28-35, 69-76, 113-125<br>"+
-				"(Can grab ledge)<br>"+
-				"Total: 179";
+				"Hit: 1<br>"+
+				"Invulnerable: 1-26<br>"+
+				"Total: 249";
 //
 //---------------------//
 				document.getElementById("info").style.display = "block";
@@ -45,11 +45,16 @@
 				currFrame = parseInt(currFrame);
 //---EDIT FRAME DATA---//
 //
-				if ((currFrame >= 28 && currFrame <= 35)||(currFrame >= 69 && currFrame <= 76)||(currFrame >= 113 && currFrame <= 125)){
+				if ((currFrame == 1)){
 					//hitbox
 					document.getElementById("currFrame").style.color = "red";
 					document.getElementById("stateName").innerHTML = "Hitbox";
 				}
+				else if ((currFrame >= 1 && currFrame <= 26)){
+					//invulnerable
+					document.getElementById("currFrame").style.color = "blue";
+					document.getElementById("stateName").innerHTML = "Invulnerable";
+				}				
 				else{
 					//vulnerable
 					document.getElementById("currFrame").style.color = "white";
@@ -63,7 +68,7 @@
 </head>
 <!--EDIT PROPER FULL TEXT (char,action)-->
 <!---->
-	<body onload="onload('Jigglypuff','Sing');updateTextColor();"> 
+	<body onload="onload('Jigglypuff','Rest');updateTextColor();"> 
 <!---->
 <!---------------------------------->
 		<div id="info" class="bubble"></div>
@@ -78,7 +83,7 @@
 		<div id="gifDiv">				
 <!--EDIT GIF URL-->
 <!---->
-			<img id="gifFrame" src="../../images/unknown.png" rel:animated_src="http://i.imgur.com/PSt4rjW.gif" rel:auto_play="0" rel:rubbable="1"/>
+			<img id="gifFrame" src="../../images/unknown.png" rel:animated_src="http://i.imgur.com/5OgsbLz.gif" rel:auto_play="0" rel:rubbable="1"/>
 <!---->
 <!---------------->
 		</div>

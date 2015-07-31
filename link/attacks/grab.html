@@ -21,7 +21,7 @@
 				"<u>"+saveChar+"</u><br><i> &#8627; "+saveAction+"</i><br>"+
 //---EDIT FRAME INFO---//
 //
-				"Hit hook: 11-17<br>"+
+				"Hit hook: 10-17<br>"+
 				"Hit close: 11-13<br>"+
 				"Total: 30";
 //
@@ -45,10 +45,10 @@
 				currFrame = parseInt(currFrame);
 //---EDIT FRAME DATA---//
 //
-				if (currFrame >= 7 && currFrame <= 17){
-					//hitbox
-					document.getElementById("currFrame").style.color = "red";
-					document.getElementById("stateName").innerHTML = "Hitbox";
+				if (currFrame >= 10 && currFrame <= 17){
+					//Grab
+					document.getElementById("currFrame").style.color = "purple";
+					document.getElementById("stateName").innerHTML = "Grab";
 				}
 				else{
 					//vulnerable

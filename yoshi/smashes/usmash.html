@@ -21,7 +21,7 @@
 				"<u>"+saveChar+"</u><br><i> &#8627; "+saveAction+"</i><br>"+
 //---EDIT FRAME INFO---//
 //
-				"Hit: 14-16<br>"+
+				"Hit: 11-15<br>"+
 				"Head inv: 11-15<br>"+
 				"IASA: 40<br>"+
 				"Charge frame: 6<br>"+
@@ -47,10 +47,10 @@
 				currFrame = parseInt(currFrame);
 //---EDIT FRAME DATA---//
 //
-				if ((currFrame >= 14 && currFrame <= 16)){
+				if ((currFrame >= 11 && currFrame <= 15)){
 					//hitbox
 					document.getElementById("currFrame").style.color = "red";
-					document.getElementById("stateName").innerHTML = "Hitbox";
+					document.getElementById("stateName").innerHTML = "Hitbox + Head inv";
 				}
 				else{
 					//vulnerable
