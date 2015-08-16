@@ -14,10 +14,31 @@
 	<script type="text/javascript" src="../../rubbable.js"></script>
 	<script>
 		var popupOpen = false;
+		var showDamage = false;
 		function popupInfo(){
 			if (popupOpen == false){	
 				//is closed -> open popup
-				document.getElementById("info").innerHTML = ""+
+//---EDIT FRAME INFO---//
+//			
+				if (showDamage == false){
+					info = ""+
+				"Hit: 8-23<br>"+
+				"IASA: 48<br>"+
+				"Auto cancel: 1-7, 40-49<br>"+
+				"Landlag: 30<br>"+
+				"L-canceled: 15<br>"+
+				"Total: 49";
+				}
+				else if (showDamage == true){
+					info = ""+
+					"Damage: <br>"+
+					"&#8658; 13%<br>"+
+					"Shield stun: 7<br>"+
+					"Advantage: -8<br>";				
+				}
+//
+//---------------------//					
+				document.getElementById("info").innerHTML = ""+"<hr>"+info;
 				"<u>"+saveChar+"</u><br><i> &#8627; "+saveAction+"</i><br>"+
 //---EDIT FRAME INFO---//
 //
@@ -84,7 +105,7 @@
 			<!--<p id="charName">Name:</p>-->
 			<p id="actionName">Action</p><br>
 			<p id="stateName">State</p><br>
-			<p id="currFrame">0</p> <p id="totalFrames">/ 0</p><br>	
+			<p id="currFrame">0</p> <p id="TOTALFrames">/ 0</p><br>	
 		</div>
 		<img id="charIcon" src="../../images/silhouette.png" onclick="popupInfo()"> 		
 		<img id="backIcon" src="../../images/back.png" onclick="location.href='../moveset.html'">		

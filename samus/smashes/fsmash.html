@@ -21,7 +21,7 @@
 				"<u>"+saveChar+"</u><br><i> &#8627; "+saveAction+"</i><br>"+
 //---EDIT FRAME INFO---//
 //
-				"Hit: 10-12<br>"+
+				"Hit: 10-13<br>"+
 				"Charge frame: 4<br>"+
 				"Total: 43";
 //
@@ -45,7 +45,7 @@
 				currFrame = parseInt(currFrame);
 //---EDIT FRAME DATA---//
 //
-				if ((currFrame >= 10 && currFrame <= 12)){
+				if ((currFrame >= 10 && currFrame <= 13)){
 					//hitbox
 					document.getElementById("currFrame").style.color = "red";
 					document.getElementById("stateName").innerHTML = "Hitbox";
@@ -71,7 +71,7 @@
 			<!--<p id="charName">Name:</p>-->
 			<p id="actionName">Action</p><br>
 			<p id="stateName">State</p><br>
-			<p id="currFrame">0</p> <p id="totalFrames">/ 0</p><br>	
+			<p id="currFrame">0</p> <p id="TOTALFrames">/ 0</p><br>	
 		</div>
 		<img id="charIcon" src="../../images/silhouette.png" onclick="popupInfo()"> 		
 		<img id="backIcon" src="../../images/back.png" onclick="location.href='../moveset.html'">		

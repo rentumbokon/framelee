@@ -77,8 +77,8 @@ function getTotalFrames(){
 	setInterval(function(){
 		var isLoaded = gif1.get_loading;
 		if (isLoaded){
-			var totalFrameNum = gif1.get_length();
-			document.getElementById("totalFrames").innerHTML = "/ " + totalFrameNum;
+			var TOTALFrameNum = gif1.get_length();
+			document.getElementById("TOTALFrames").innerHTML = "/ " + TOTALFrameNum;
 		}
 	},16);
 }

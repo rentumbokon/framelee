@@ -297,11 +297,19 @@ hr{
 	font-size:12px !important;
 	height:20px !important;
 	line-height: 20px !important;
+	border: 0 !important;
 }
 
 h1{ /*for movement*/
 	color: #00ec00;
 	display: inline;
+}
+h2{ /*for recovery*/
+	color: red;
+	display: inline;
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 15px;
 }
 
 #singleFrame{
@@ -374,7 +382,7 @@ h1{ /*for movement*/
 	display:inline;
 }
 
-#totalFrames{
+#TOTALFrames{
 	position: relative;
 	display:inline;
 }
@@ -415,6 +423,72 @@ h1{ /*for movement*/
 	background:#00ec00;
 	position:absolute;
 	z-index:999;
+}
+
+/*tier list*/
+.stier{
+	color: red !important;
+	font-size: 20px !important;
+	line-height:25px;
+	position: absolute;
+	display: inline;
+	left: 50px;
+}
+.atier{
+	color: orange !important;
+	font-size: 20px !important;
+	line-height:25px;
+	position: absolute;
+	display: inline;
+	left: 50px;
+}
+.btier{
+	color: yellow !important;
+	font-size: 20px !important;
+	line-height:25px;
+	position: absolute;
+	display: inline;
+	left: 50px;
+}
+.ctier{
+	color: #1E90FF !important;
+	font-size: 20px !important;
+	line-height:25px;
+	position: absolute;
+	display: inline;
+	left: 50px;
+}
+.ftier{
+	color: #606060 !important;
+	font-size: 20px !important;
+	line-height:25px;
+	position: absolute;
+	display: inline;
+	left: 50px;
+}
+.badMove{
+	color: yellow !important;
+	font-size: 20px !important;
+	line-height:25px;
+	position: absolute;
+	display: inline;
+	left: 50px;
+}
+.okMove{
+	color: orange !important;
+	font-size: 20px !important;
+	line-height:25px;
+	position: absolute;
+	display: inline;
+	left: 50px;
+}
+.goodMove{
+	color: red !important;
+	font-size: 20px !important;
+	line-height:25px;
+	position: absolute;
+	display: inline;
+	left: 50px;
 }
 /*chat bubble*/
 .bubble 

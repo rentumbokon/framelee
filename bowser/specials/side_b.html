@@ -14,21 +14,32 @@
 	<script type="text/javascript" src="../../rubbable.js"></script>
 	<script>
 		var popupOpen = false;
+		var showDamage = false;
 		function popupInfo(){
 			if (popupOpen == false){	
 				//is closed -> open popup
-				document.getElementById("info").innerHTML = ""+
-				"<u>"+saveChar+"</u><br><i> &#8627; "+saveAction+"</i><br>"+
 //---EDIT FRAME INFO---//
-//
+//			
+				if (showDamage == false){
+					info = ""+
 				"Hit/Grab: 16-18<br>"+
 				"Total: 59<br>"+
 				"Bite: 19-23 of 32<br>"+
 				"Throw-back: 14 of 40<br>"+
 				"Throw-forward: 24 of 43<br>"+
 				"(hit: 19-23)";
+				}
+				else if (showDamage == true){
+					info = ""+
+					"Damage: <br>"+
+					"&#8658; Slash: 12%/10% <br>"+
+					"&#8658; Captured Bite: 4% <br>"+			
+					"&#8658; Captured Pummel: 3% <br>"+
+				}
 //
-//---------------------//
+//---------------------//						
+				document.getElementById("info").innerHTML = ""+
+				"<u>"+saveChar+"</u><br><i> &#8627; "+saveAction+"</i><br>"+"<hr>"+info;
 				document.getElementById("info").style.display = "block";
 				popupOpen = true;
 			}
@@ -38,6 +49,16 @@
 				popupOpen = false;
 			}
 		}
+		function switchInfo(){
+			if (showDamage == false){
+				showDamage = true;	
+			}
+			else if (showDamage == true){
+				showDamage = false;						
+			}
+			popupInfo(); 	 //close and reopen		
+			popupInfo();
+		}		
 		function updateTextColor(){
 			setInterval(function(){
 				var currFrame = document.getElementById("currFrame").innerHTML;
@@ -69,12 +90,12 @@
 	<body onload="onload('Bowser','Koopa Klaw');updateTextColor();"> 
 <!---->
 <!---------------------------------->
-		<div id="info" class="bubble"></div>
+		<div id="info" class="bubble" onclick="switchInfo()"></div>
 		<div id="labFloatLeft"> 
 			<!--<p id="charName">Name:</p>-->
 			<p id="actionName">Action</p><br>
 			<p id="stateName">State</p><br>
-			<p id="currFrame">0</p> <p id="totalFrames">/ 0</p><br>	
+			<p id="currFrame">0</p> <p id="TOTALFrames">/ 0</p><br>	
 		</div>
 		<img id="charIcon" src="../../images/silhouette.png" onclick="popupInfo()"> 		
 		<img id="backIcon" src="../../images/back.png" onclick="location.href='../moveset.html'">		

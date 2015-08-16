@@ -14,21 +14,34 @@
 	<script type="text/javascript" src="../../rubbable.js"></script>
 	<script>
 		var popupOpen = false;
+		var showDamage = false;
 		function popupInfo(){
 			if (popupOpen == false){	
 				//is closed -> open popup
-				document.getElementById("info").innerHTML = ""+
-				"<u>"+saveChar+"</u><br><i> &#8627; "+saveAction+"</i><br>"+
 //---EDIT FRAME INFO---//
+//			
+				if (showDamage == false){
+					info = ""+
+					"Hit: 8-11<br>"+
+					"IASA: 42<br>"+
+					"Auto cancel: 1-7, 31-45<br>"+
+					"Landlag: 30<br>"+
+					"L-canceled: 15<br>"+
+					"Total: 45";
+				}
+				else if (showDamage == true){
+					info = ""+
+					"Damage: <br>"+
+					"&#8658; Left Claw: 14% <br>"+
+					"&#8658; Left Arm: 12% <br>"+
+					"&#8658; Right Shoulder : 11% <br>"+
+					"Shield stun: 8<br>"+
+					"Advantage: -6<br>";				
+				}
 //
-				"Hit: 8-11<br>"+
-				"IASA: 42<br>"+
-				"Auto cancel: 1-7, 31-45<br>"+
-				"Landlag: 30<br>"+
-				"L-canceled: 15<br>"+
-				"Total: 45";
-//
-//---------------------//
+//---------------------//	
+				document.getElementById("info").innerHTML = ""+
+				"<u>"+saveChar+"</u><br><i> &#8627; "+saveAction+"</i><br>"+"<hr>"+info;
 				document.getElementById("info").style.display = "block";
 				popupOpen = true;
 			}
@@ -38,6 +51,16 @@
 				popupOpen = false;
 			}
 		}
+		function switchInfo(){
+			if (showDamage == false){
+				showDamage = true;	
+			}
+			else if (showDamage == true){
+				showDamage = false;						
+			}
+			popupInfo(); 	 //close and reopen		
+			popupInfo();
+		}		
 		function updateTextColor(){
 			setInterval(function(){
 				var currFrame = document.getElementById("currFrame").innerHTML;
@@ -79,12 +102,12 @@
 	<body onload="onload('Bowser','Forward Aerial');updateTextColor();"> 
 <!---->
 <!---------------------------------->
-		<div id="info" class="bubble"></div>
+		<div id="info" class="bubble" onclick="switchInfo()"></div>
 		<div id="labFloatLeft"> 
 			<!--<p id="charName">Name:</p>-->
 			<p id="actionName">Action</p><br>
 			<p id="stateName">State</p><br>
-			<p id="currFrame">0</p> <p id="totalFrames">/ 0</p><br>	
+			<p id="currFrame">0</p> <p id="TOTALFrames">/ 0</p><br>	
 		</div>
 		<img id="charIcon" src="../../images/silhouette.png" onclick="popupInfo()"> 		
 		<img id="backIcon" src="../../images/back.png" onclick="location.href='../moveset.html'">		

@@ -908,7 +908,7 @@
                     setTimeout(doParse, 0);
                 };
                 h.onprogress = function (e) {
-                    if (e.lengthComputable) doShowProgress(e.loaded, e.total, true);
+                    if (e.lengthComputable) doShowProgress(e.loaded, e.TOTAL, true);
                 };
                 h.onerror = function() { doLoadError('xhr'); };
                 h.open('GET', src, true);
