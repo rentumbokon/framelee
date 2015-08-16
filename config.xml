@@ -1,4 +1,4 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.kerblast.framelee" version="1.0.0">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.kerblast.framelee" version="1.0.1">
   <name>Frame Melee</name>
   <description>Frame data on all characters of Super Smash Bros Melee</description>
   <author href="http://www.twitter.com/kerblaster" email="kerblaster@hotmail.com">Renard Tumbokon</author>
